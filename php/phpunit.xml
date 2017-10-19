@@ -7,6 +7,15 @@
 	strict="true" 
 	verbose="true">
 
+	<filter>
+		<whitelist processUncoveredFilesFromWhitelist="true">
+			<directory suffix=".php">src</directory>
+			<exclude>
+				<file>src/texttest_fixture.php</file>
+			</exclude>
+		</whitelist>
+	</filter>
+
 	<testsuites>
 		<testsuite name="AllTests">
 			<directory suffix="_test.php">test</directory>
