@@ -1,12 +1,15 @@
 <?php
 
+use GildedRose\AgedBrie;
+use GildedRose\Item;
+
 require_once 'gilded_rose.php';
 
 echo "OMGHAI!\n";
 
 $items = array(
     new Item('+5 Dexterity Vest', 10, 20),
-    new Item('Aged Brie', 2, 0),
+    new AgedBrie(0, 2),
     new Item('Elixir of the Mongoose', 5, 7),
     new Item('Sulfuras, Hand of Ragnaros', 0, 80),
     new Item('Sulfuras, Hand of Ragnaros', -1, 80),

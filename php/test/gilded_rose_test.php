@@ -1,5 +1,6 @@
 <?php
 
+use GildedRose\Item;
 use PHPUnit\Framework\TestCase;
 
 require_once 'gilded_rose.php';
@@ -26,6 +27,20 @@ class GildedRoseTest extends TestCase
         $gildedRose->update_quality();
 
         $this->assertSame(2, $item->quality);
+    }
+
+
+    public function test_golden_master()
+    {
+        ob_start();
+        $days = 100;
+
+        $argv = ['command', $days];
+        require __DIR__ . '/../src/texttest_fixture.php';
+
+        $output = ob_get_clean();
+
+        $this->assertStringEqualsFile('fixtures/golden.txt', $output);
     }
 
     /**
