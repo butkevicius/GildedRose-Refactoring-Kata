@@ -32,6 +32,7 @@ class GildedRoseTest extends TestCase
 
     public function test_golden_master()
     {
+        $goldenFixture = __DIR__ . DIRECTORY_SEPARATOR . 'fixtures/golden.txt';
         ob_start();
         $days = 100;
 
@@ -40,7 +41,7 @@ class GildedRoseTest extends TestCase
 
         $output = ob_get_clean();
 
-        $this->assertStringEqualsFile('fixtures/golden.txt', $output);
+        $this->assertStringEqualsFile('' . $goldenFixture . '', $output);
     }
 
     /**

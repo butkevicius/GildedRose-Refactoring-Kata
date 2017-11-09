@@ -37,13 +37,4 @@ class AgedBrie extends Item
     }
 
 
-    public function getQuality()
-    {
-        return $this->quality;
-    }
-
-    public function getSellIn()
-    {
-        return $this->sell_in;
-    }
 }
